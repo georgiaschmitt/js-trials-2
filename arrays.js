@@ -3,19 +3,26 @@
 
 // 1. printIndices
 function printIndices(items) {
-  // Replace this with your code
+  for (const i in items) {
+    console.log(`${items[i]} ${i}`);
+  }
 }
 
 
 // 2. everyOtherItem
 function everyOtherItem(items) {
-  for (const i in items) {
-    console.log(f")
+  const result = [];
+  for (const item in items) {
+    if (item % 2 == 0) {
+      result.push(items[item]);
+    }
   }
+  console.log(result);
 }
 
 
 // 3. smallestNItems
 function smallestNItems(items, n) {
-  // Replace this with your code
+  const sortedNums = items.sort((a, b) => a - b);
+  console.log(sortedNums.slice(0,n).reverse())
 }
